@@ -11,7 +11,7 @@ function SidebarChat() {
     }, [])
 
     return (
-        <div>
+        <div className="sidebarChat">
             <Avatar src={`https://avatars.dicebear.com/api/identicon/${seed}.svg`}/>
             <div className="sidebarChatInfo">
                 <h2>Room name</h2>
