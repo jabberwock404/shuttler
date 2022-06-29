@@ -6,10 +6,12 @@ function SidebarChat({ addNewChat }) {
 
     const [seed, setSeed] = useState('');
 
+    // set randomness for pfp
     useEffect(() => {
         setSeed(Math.floor(Math.random() * 5000));
     }, [])
 
+    // add chat room and store data on DB
     const createChat = () => {
         const roomName = prompt("Please enter new room name");
 
@@ -28,7 +30,7 @@ function SidebarChat({ addNewChat }) {
         </div>
     ): (
         <div onClick={createChat} className="sidebarChat">
-            <h2>new chat</h2>
+            <h2>add new chat</h2>
         </div>
     )
 }
